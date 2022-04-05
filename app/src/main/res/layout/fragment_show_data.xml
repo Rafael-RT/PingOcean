@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    tools:context=".ShowData">
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/idText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="id"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="name"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="email"
+                    android:linksClickable="true"
+                    android:text="email"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="phone"
+                    android:linksClickable="true"
+                    android:text="phone"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="avatar"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="position"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/companyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="companyName"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/nameEng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="nameEng"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/timezone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="timezone"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/sections"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="sections"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/alertEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="alertEmail"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/sendSystemNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="sendSystemNotifications"
+                    android:textSize="10dp" />
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:text="Выйти"
+                    />
+            </LinearLayout>
+        </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
