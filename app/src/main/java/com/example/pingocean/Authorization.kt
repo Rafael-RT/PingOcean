@@ -20,7 +20,6 @@ class Authorization : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -70,7 +69,7 @@ class Authorization : Fragment() {
                 else {
                     val secondFragment = ShowData.newInstance(result.body()?.token.toString())
 
-                    val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+                    val transaction: FragmentTransaction = parentFragmentManager.beginTransaction()
                     transaction.replace(R.id.main,secondFragment).commit()
                 }
             }

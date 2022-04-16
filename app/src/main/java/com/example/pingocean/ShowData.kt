@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.lifecycleScope
 import com.example.pingocean.retrofit.Api
 import com.example.pingocean.retrofit.RetrofitHelper
@@ -23,7 +24,7 @@ class ShowData : Fragment() {
         val token = arguments?.getString("token").toString()
 
         val v = inflater.inflate(R.layout.fragment_show_data, container, false)
-        val btn: Button =v.findViewById(R.id.button)
+        val btn: Button = v.findViewById(R.id.button)
 
         val api = RetrofitHelper.getInstance().create(Api::class.java)
 
@@ -61,9 +62,10 @@ class ShowData : Fragment() {
         }
 
         btn.setOnClickListener {
-            requireActivity().run {
-                startActivity(Intent(this, MainActivity::class.java))
-            }
+            val fragmentAuth = Authorization()
+
+            val transaction: FragmentTransaction = parentFragmentManager.beginTransaction()
+            transaction.replace(R.id.main,fragmentAuth).commit()
         }
 
         return v

@@ -1,6 +1,7 @@
 package com.example.pingocean
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -12,10 +13,15 @@ class MainActivity : AppCompatActivity() {
 
         val fragment = Authorization()
 
-        supportFragmentManager.beginTransaction().add(R.id.main, fragment).commit()
-
+        supportFragmentManager.beginTransaction().replace(R.id.main, fragment).commit()
     }
 
+    override fun onBackPressed() {
+        val fragment = supportFragmentManager.findFragmentById(R.id.main)
+        if(fragment is Authorization) {
+            finish()
+        }
+    }
 
 
 }
